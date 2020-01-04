@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="139dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="136dp"
+        android:layout_marginEnd="136dp"
+        android:layout_marginBottom="136dp"
+        android:backgroundTint="#F8BBD0"
+        android:text="Login"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:visibility="visible" />
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="0dp"
+        android:layout_height="43dp"
+        android:layout_marginTop="16dp"
+        android:maxWidth="188dp"
+        android:minWidth="188dp"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintEnd_toEndOf="@+id/editText5"
+        app:layout_constraintStart_toStartOf="@+id/editText5"
+        app:layout_constraintTop_toBottomOf="@+id/editText5"
+        app:layout_constraintWidth_default="wrap" />
+
+    <Spinner
+        android:id="@+id/spinner4"
+        android:layout_width="188dp"
+        android:layout_height="43dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="1dp"
+        android:maxWidth="188dp"
+        android:minWidth="188dp"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintEnd_toEndOf="@+id/spinner"
+        app:layout_constraintTop_toBottomOf="@+id/spinner"
+        app:layout_constraintWidth_default="wrap" />
+
+    <EditText
+        android:id="@+id/editText5"
+        style="@android:style/Widget.EditText"
+        android:layout_width="188dp"
+        android:layout_height="43dp"
+        android:layout_marginStart="124dp"
+        android:layout_marginTop="43dp"
+        android:layout_marginEnd="99dp"
+        android:ems="10"
+        android:hint="nickname"
+        android:inputType="textPersonName"
+        android:selectAllOnFocus="false"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button2"
+        tools:visibility="visible"
+        android:autofillHints="" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="307dp"
+        android:layout_height="225dp"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="61dp"
+        android:layout_marginEnd="52dp"
+        android:backgroundTint="#E1BEE7"
+        android:clickable="true"
+        android:text="시-그날ㅡ 캐쳐ㅡ"
+        android:textSize="36sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:focusable="true" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
