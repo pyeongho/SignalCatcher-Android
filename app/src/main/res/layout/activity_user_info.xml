@@ -20,51 +20,75 @@
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         android:background="@color/colorFormBackground"
+        android:backgroundTint="#00FFFFFF"
         android:orientation="vertical"
         android:padding="10dp">
 
-        <EditText
-            android:id="@+id/editNickName"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:drawablePadding="5dp"
-            android:hint="nickname" />
-
-        <TextView
-            android:id="@+id/textGender"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Gender"
-            android:textAlignment="center"
-            android:padding="5dp" />
-
-        <RadioGroup
-            android:id="@+id/radioGender"
+        <LinearLayout
+            android:id="@+id/genderLayout"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:gravity="center"
-            android:orientation="horizontal"
-            >
+            android:orientation="horizontal">
 
-            <RadioButton
-                android:id="@+id/radioFemale"
+            <TextView
+                android:id="@+id/textGender"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:checked="true"
-                android:text="Female" />
+                android:padding="5dp"
+                android:text="Gender"
+                android:textAlignment="center" />
 
-            <RadioButton
-                android:id="@+id/radioMale"
+            <RadioGroup
+                android:id="@+id/radioGender"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Male" />
-        </RadioGroup>
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="horizontal">
 
-        <Spinner
+                <RadioButton
+                    android:id="@+id/radioFemale"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="Female" />
+
+                <RadioButton
+                    android:id="@+id/radioMale"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Male" />
+
+            </RadioGroup>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ageLayout"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:autofillHints="Age"
-            ></Spinner>
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/ageText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:text="Age"
+                android:textAlignment="center" />
+
+            <Spinner
+                android:id="@+id/ageSpinner"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:autofillHints="Age"
+                android:dropDownWidth="match_parent"
+                android:spinnerMode="dropdown"
+                android:textAlignment="center"></Spinner>
+        </LinearLayout>
 
     </LinearLayout>
 

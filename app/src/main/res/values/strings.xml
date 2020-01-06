@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">SignalCatcher</string>
+    <string name="selected_item">Selected item: </string>
 </resources>

@@ -11,10 +11,10 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        button.setOnClickListener {
-            val nextIntent = Intent(this, ListActivity::class.java)
-            startActivity(nextIntent)
-            finish()
-        }
+//        button.setOnClickListener {
+//            val nextIntent = Intent(this, ListActivity::class.java)
+//            startActivity(nextIntent)
+//            finish()
+//        }
     }
 }
