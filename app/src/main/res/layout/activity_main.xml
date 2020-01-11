@@ -1,87 +1,80 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".MainActivity">
-
-
-    <Button
-        android:id="@+id/button"
-        android:layout_width="139dp"
-        android:layout_height="49dp"
-        android:layout_marginStart="136dp"
-        android:layout_marginEnd="136dp"
-        android:layout_marginBottom="136dp"
-        android:backgroundTint="#F8BBD0"
-        android:text="Login"
-        android:visibility="visible"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:visibility="visible" />
-
-    <Spinner
-        android:id="@+id/spinner"
-        android:layout_width="0dp"
-        android:layout_height="43dp"
-        android:layout_marginTop="16dp"
-        android:maxWidth="188dp"
-        android:minWidth="188dp"
-        app:layout_constrainedWidth="true"
-        app:layout_constraintEnd_toEndOf="@+id/editText5"
-        app:layout_constraintStart_toStartOf="@+id/editText5"
-        app:layout_constraintTop_toBottomOf="@+id/editText5"
-        app:layout_constraintWidth_default="wrap" />
-
-    <Spinner
-        android:id="@+id/spinner4"
-        android:layout_width="188dp"
-        android:layout_height="43dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="1dp"
-        android:maxWidth="188dp"
-        android:minWidth="188dp"
-        app:layout_constrainedWidth="true"
-        app:layout_constraintEnd_toEndOf="@+id/spinner"
-        app:layout_constraintTop_toBottomOf="@+id/spinner"
-        app:layout_constraintWidth_default="wrap" />
-
-    <EditText
-        android:id="@+id/editText5"
-        style="@android:style/Widget.EditText"
-        android:layout_width="188dp"
-        android:layout_height="43dp"
-        android:layout_marginStart="124dp"
-        android:layout_marginTop="43dp"
-        android:layout_marginEnd="99dp"
-        android:ems="10"
-        android:hint="nickname"
-        android:inputType="textPersonName"
-        android:selectAllOnFocus="false"
-        android:visibility="visible"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button2"
-        tools:visibility="visible"
-        android:autofillHints="" />
-
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="307dp"
-        android:layout_height="225dp"
-        android:layout_marginStart="52dp"
-        android:layout_marginTop="61dp"
-        android:layout_marginEnd="52dp"
-        android:backgroundTint="#E1BEE7"
-        android:clickable="true"
-        android:text="시-그날ㅡ 캐쳐ㅡ"
-        android:textSize="36sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:focusable="true" />
-
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_height="match_parent">
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent">
+            <ImageView
+                android:id="@+id/btn_add"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:scaleType="fitCenter"
+                android:src="@drawable/btn_add">
+            </ImageView>
+            <ImageView
+                android:id="@+id/btn_option"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:scaleType="fitCenter"
+                android:src="@drawable/btn_option">
+            </ImageView>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="14"
+        android:orientation="vertical">
+        <LinearLayout
+            android:id="@+id/list_empty"
+            android:visibility="visible"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="100dp"
+                    android:layout_gravity="bottom"
+                    android:src="@drawable/list_empty"></ImageView>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center_horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="100dp"
+                    android:textSize="20dp"
+                    android:text="진행 중인 대화가 없습니다."></TextView>
+            </LinearLayout>
+        </LinearLayout>
+        <ListView
+            android:id="@+id/listView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        </ListView>
+    </LinearLayout>
+</LinearLayout>
