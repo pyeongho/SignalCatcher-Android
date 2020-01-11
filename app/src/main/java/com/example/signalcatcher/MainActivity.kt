@@ -2,7 +2,6 @@ package com.example.signalcatcher
 
 import android.Manifest
 import android.app.AlertDialog
-import android.app.ProgressDialog
 import android.content.DialogInterface
 import android.content.pm.PackageManager
 import androidx.appcompat.app.AppCompatActivity
@@ -11,7 +10,6 @@ import android.os.Environment
 import android.util.Log
 import android.view.View
 import android.widget.ArrayAdapter
-import android.widget.Toast
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import kotlinx.android.synthetic.main.activity_main.*
@@ -20,9 +18,6 @@ import java.io.File
 import java.io.FileReader
 import java.lang.Exception
 import java.util.*
-import java.util.Map
-import kotlin.collections.HashMap
-
 
 class MainActivity : AppCompatActivity() {
 
