@@ -128,5 +128,6 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+    // 파일정보 데이터 클래스
     data class TalkFile (val fileName : String, val filePath : String)
 }
