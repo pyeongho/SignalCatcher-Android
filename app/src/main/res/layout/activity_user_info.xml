@@ -1,64 +1,60 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/colorPrimaryBackground"
-    tools:context=".UserInfoActivity">
-
-    <LinearLayout
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="activity"
+            type="com.example.signalcatcher.UserInfoActivity" />
+    </data>
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:gravity="center_horizontal"
-        android:orientation="vertical">
+        android:background="@color/colorPrimaryBackground"
+        tools:context=".UserInfoActivity">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:orientation="vertical">
-
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="2"
-                android:src="@drawable/logo" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="center"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
             android:orientation="vertical">
 
             <LinearLayout
-                android:id="@+id/linearLayout"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
-                android:background="@color/colorFormBackground"
-                android:backgroundTint="#00FFFFFF"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
                 android:gravity="center"
-                android:orientation="vertical"
-                android:padding="10dp">
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:src="@drawable/logo" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
 
                 <LinearLayout
                     android:id="@+id/genderLayout"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="80dp"
                     android:layout_weight="1"
                     android:gravity="center"
                     android:orientation="horizontal">
 
                     <TextView
                         android:id="@+id/textGender"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
                         android:padding="5dp"
                         android:text="Gender"
                         android:textAlignment="center"
@@ -68,6 +64,7 @@
                         android:id="@+id/radioGender"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
+                        android:layout_weight="1"
                         android:gravity="center"
                         android:orientation="horizontal">
 
@@ -75,14 +72,20 @@
                             android:id="@+id/radioFemale"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:checked="true"
-                            android:text="Female" />
+                            android:layout_margin="10dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/imgbtn_female"
+                            android:backgroundTint="#EC407A"
+                            android:checked="true" />
 
                         <RadioButton
                             android:id="@+id/radioMale"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Male" />
+                            android:layout_margin="10dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/imgbtn_male"
+                            android:backgroundTint="#42A5F5" />
 
                     </RadioGroup>
                 </LinearLayout>
@@ -90,52 +93,67 @@
                 <LinearLayout
                     android:id="@+id/ageLayout"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="80dp"
                     android:layout_weight="1"
                     android:gravity="center"
                     android:orientation="horizontal">
 
                     <TextView
                         android:id="@+id/ageText"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:padding="5dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
                         android:text="Age"
                         android:textAlignment="center"
                         android:textSize="24sp" />
 
-                    <Spinner
-                        android:id="@+id/ageSpinner"
-                        android:layout_width="100dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="40dp"
-                        android:layout_marginTop="5dp"
-                        android:layout_marginBottom="5dp"
-                        android:autofillHints="Age"
-                        android:dropDownWidth="match_parent"
-                        android:spinnerMode="dropdown"
-                        android:textAlignment="center"></Spinner>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <Spinner
+                            android:id="@+id/ageSpinner"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:autofillHints="Age"
+                            android:dropDownWidth="match_parent"
+                            android:gravity="center"
+                            android:spinnerMode="dropdown"
+                            android:textAlignment="center"></Spinner>
+                    </LinearLayout>
+
                 </LinearLayout>
 
             </LinearLayout>
-        </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="3"
-            android:gravity="center"
-            android:orientation="vertical">
-
-            <Button
-                android:id="@+id/buttonEnter"
-                android:layout_width="180dp"
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="15dp"
-                android:background="@color/colorPrimaryDark"
-                android:text="Enter"
-                android:textColor="@color/colorFormBackground" />
-        </LinearLayout>
-    </LinearLayout>
+                android:layout_weight="3"
+                android:gravity="center"
+                android:orientation="vertical">
 
-</RelativeLayout>
+                <Button
+                    android:id="@+id/buttonEnter"
+                    android:layout_width="180dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="20dp"
+                    android:layout_weight="2"
+                    android:background="@color/colorPrimaryDark"
+                    android:text="Enter"
+                    android:textColor="@color/colorFormBackground" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical"/>
+                <!--                    android:onClick="@{activity::onEnterClick}"-->
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</layout>

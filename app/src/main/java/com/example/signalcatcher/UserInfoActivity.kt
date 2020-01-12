@@ -1,5 +1,4 @@
 package com.example.signalcatcher
-
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -14,7 +13,6 @@ class UserInfoActivity : AppCompatActivity(), View.OnClickListener {
 
     lateinit var radioGroup: RadioGroup
     lateinit var buttonEnter: Button
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_user_info)
@@ -24,7 +22,6 @@ class UserInfoActivity : AppCompatActivity(), View.OnClickListener {
 
         findViewById<Button>(R.id.buttonEnter).setOnClickListener {
             val id= radioGroup.checkedRadioButtonId
-
             val radioButton = findViewById<RadioButton>(id)
 
             Toast.makeText(this@UserInfoActivity, "You selected "
@@ -56,10 +53,10 @@ class UserInfoActivity : AppCompatActivity(), View.OnClickListener {
         }
     }
 
+
     override fun onClick(view: View?) {
         intent = Intent(this, ListActivity::class.java)
         // start your next activity
         startActivity(intent)
-
     }
 }
