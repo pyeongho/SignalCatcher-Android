@@ -8,20 +8,19 @@ import android.widget.RadioButton
 import android.widget.RadioGroup
 import android.widget.Toast
 import android.widget.*
+import kotlinx.android.synthetic.main.activity_user_info.*
 
 class UserInfoActivity : AppCompatActivity(), View.OnClickListener {
 
-    lateinit var radioGroup: RadioGroup
-    lateinit var buttonEnter: Button
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_user_info)
 
-        radioGroup = findViewById(R.id.radioGender)
-        buttonEnter = findViewById(R.id.buttonEnter)
 
-        findViewById<Button>(R.id.buttonEnter).setOnClickListener {
-            val id= radioGroup.checkedRadioButtonId
+
+        buttonEnter.setOnClickListener {
+            val id= radioGender.checkedRadioButtonId
             val radioButton = findViewById<RadioButton>(id)
 
             Toast.makeText(this@UserInfoActivity, "You selected "
@@ -30,9 +29,8 @@ class UserInfoActivity : AppCompatActivity(), View.OnClickListener {
         buttonEnter.setOnClickListener(this)
 
         val ages = resources.getStringArray(R.array.ages)
-        val ageSpinner = findViewById<Spinner>(R.id.ageSpinner)
 
-        if (ageSpinner != null) {
+        ageSpinner?.let {
             val ageAdapter = ArrayAdapter(this,
                 android.R.layout.simple_spinner_item, ages)
             ageSpinner.adapter = ageAdapter
@@ -41,9 +39,9 @@ class UserInfoActivity : AppCompatActivity(), View.OnClickListener {
                 AdapterView.OnItemSelectedListener {
                 override fun onItemSelected(parent: AdapterView<*>,
                                             view: View, position: Int, id: Long) {
-                Toast.makeText(this@UserInfoActivity,
-                    getString(R.string.selected_item) + " " +
-                            "" + ages[position], Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this@UserInfoActivity,
+                        getString(R.string.selected_item) + " " +
+                                "" + ages[position], Toast.LENGTH_SHORT).show()
                 }
 
                 override fun onNothingSelected(parent: AdapterView<*>) {
@@ -51,6 +49,7 @@ class UserInfoActivity : AppCompatActivity(), View.OnClickListener {
                 }
             }
         }
+
     }
 
 
